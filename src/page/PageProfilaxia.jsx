@@ -7,6 +7,7 @@ import comdorAnimation from "../assets/lootlefiles/comdor.json";
 import sensivelAnimation from "../assets/lootlefiles/sensivel.json";
 import queropararAnimation from "../assets/lootlefiles/queroparar.json";
 
+import bemVindo from "../assets/profilaxia/bemvindo.jpeg";
 import card1Img from "../assets/profilaxia/card_1.jpeg";
 import card2Img from "../assets/profilaxia/card_2.jpeg";
 import card3Img from "../assets/profilaxia/card_3.png";
@@ -21,20 +22,26 @@ const Lottie = LottieModule?.default ?? LottieModule;
 function PageProfilaxia(props) {
   const [showMascote, setShowMascote] = useState(false);
   const [statusMascote, setStatusMascote] = useState(false);
-  const [itemCard, setitemCard] = useState(1);
+  const [itemCard, setitemCard] = useState(0);
 
   function mudaCard(item) {
     if (item > 8) item = 8;
-    if (item < 1) item = 1;
+    if (item < 0) item = 0;
     setitemCard(item);
   }
 
   const cards = {
+    0: {
+      img: bemVindo,
+      title: "Vamos nessa!",
+      texto:
+        "No nosso atendimento, realizaremos a sua profilaxia, que é a limpeza profissional dos dentes para remoção de placa e manchas superficiais. Durante o procedimento, também avaliaremos a necessidade de realizar uma raspagem, que é indicada caso haja algum acúmulo de tártaro mais resistente, garantindo a total saúde da sua gengiva.",
+    },
     1: {
       img: card1Img,
       title: "Exame Inicial",
       texto:
-        "Olá! Vou usar este espelho para olhar os seus dentes bem de perto.Por favor, pode abrir a boca?",
+        "Vou usar este espelho para olhar os seus dentes bem de perto.Por favor, pode abrir a boca?",
     },
     2: {
       img: card2Img,
