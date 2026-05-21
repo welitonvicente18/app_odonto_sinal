@@ -1,18 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { UserIcon, ArrowPathIcon, Bars3Icon } from "@heroicons/react/24/solid";
+import { UserIcon, Bars3Icon } from "@heroicons/react/24/solid";
 import logoImg from "../assets/logo.png";
 import Swal from "sweetalert2";
 
-function NavBar() {
-  const [name, setName] = useState("Paciente");
+function NavBar(props) {
   const [open, setOpen] = useState(false);
-
-  /*
-  useEffect(() => {
-    alterName();
-  }, []);
-*/
 
   function alterName() {
     Swal.fire({
@@ -22,7 +15,7 @@ function NavBar() {
       showCancelButton: true,
       confirmButtonText: "Confirmar",
       preConfirm: (nameInput) => {
-        setName(nameInput);
+        props.setName(nameInput);
       },
     });
   }
@@ -53,7 +46,13 @@ function NavBar() {
               onClick={() => setOpen(!open)}
             />
             {open && (
-              <ul className="absolute mt-32 w-68 bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden text-end">
+              <ul className="absolute right-0 mt-44 w-56 bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden z-50">
+                <li className="p-3 hover:bg-slate-100 cursor-pointer">
+                  <Link to="/" onClick={() => setOpen(false)}>
+                    Dashboard
+                  </Link>
+                </li>
+
                 <li className="p-3 hover:bg-slate-100 cursor-pointer">
                   <Link to="/profilaxia" onClick={() => setOpen(false)}>
                     Profilaxia Odontológica
@@ -62,9 +61,8 @@ function NavBar() {
               </ul>
             )}
           </div>
-
           <div className="basis-1/3 border border-red-200 rounded-3xl shadow-sm flex items-center justify-center h-10 sm:h-16">
-            <ArrowPathIcon
+            <UserIcon
               className="h-10 text-red-600"
               onClick={() => alterName()}
             />

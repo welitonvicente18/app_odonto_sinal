@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "@fontsource/inter";
 import "./css/App.css";
 import NavBar from "./page/NavBar";
@@ -7,6 +8,12 @@ import Footer from "./page/Footer";
 import planoDeFundo from "./assets/plano_fundo.png";
 import { Routes, Route } from "react-router-dom";
 function App() {
+  const [name, setName] = useState("Paciente");
+
+  useEffect(() => {
+    setName;
+  }, []);
+
   return (
     <div className="relative min-h-screen">
       <div
@@ -17,10 +24,10 @@ function App() {
         }}
       />
       <div className="relative z-10">
-        <NavBar />
+        <NavBar name={name} setName={setName} />
         <Routes>
-          <Route path="/" element={<PageSentimento />} />
-          <Route path="/profilaxia" element={<PageProfilaxia />} />
+          <Route path="/" element={<PageSentimento name={name} />} />
+          <Route path="/profilaxia" element={<PageProfilaxia name={name} />} />
         </Routes>
         <Footer />
       </div>

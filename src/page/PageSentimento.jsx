@@ -13,8 +13,7 @@ import queropararAnimation from "../assets/lootlefiles/queroparar.json";
 
 const Lottie = LottieModule?.default ?? LottieModule;
 
-function Sentimento() {
-  const name = "Paciente";
+function Sentimento(props) {
   const [showMascote, setShowMascote] = useState(false);
   const [statusMascote, setStatusMascote] = useState(false);
 
@@ -31,7 +30,7 @@ function Sentimento() {
       {/* Apresentation */}
       <section className="text-center my-8 font-bold gap-4 drop-shadow-lg">
         <h1 className="text-2xl sm:text-4xl mt-6 italic">
-          Olá, <span className="text-sky-600 text-1xl md:text-6xl">{name}</span>
+          Olá, <span className="text-sky-600 text-1xl md:text-6xl">{props.name}</span>
         </h1>
         <h3 className="text-2xl md:text-5xl mt-3">
           Como você esta se sentindo ?
