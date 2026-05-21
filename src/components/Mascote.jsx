@@ -71,7 +71,7 @@ function Mascote(props) {
         />
       </div>
       <div className="w-1/3 h-1/2">
-        <div className="bg-white rounded-3xl p-4 shadow-xl text-center align-top leading-16 text-4xl">
+        <div className="bg-white rounded-3xl p-4 shadow-xl text-center align-top leading-10 text-4xl">
           {falas[props.statusMascote].texto}
         </div>
       </div>

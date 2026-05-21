@@ -161,7 +161,7 @@ function App() {
             <img src={senvivelImg} className="h-20 md:h-38 xl:h-48" />
           </CardSentimento>
           <CardSentimento
-            sentimento="Ansioso"
+            sentimento="Quero Parar"
             bgColor="bg-red-100"
             textColor="text-red-600"
             handleMascote={() => {handleMascote('queroparar')}}
