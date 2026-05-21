@@ -36,7 +36,7 @@ function Sentimento(props) {
           Como você esta se sentindo ?
         </h3>
       </section>
-      <section className="rounded-3xl bg-white mx-5 mt-16 p-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center shadow-lg">
+      <section className="rounded-3xl bg-white mx-5 mt-16 p-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center shadow-lg">
         <CardSentimento
           sentimento="Tranquilo"
           bgColor="bg-green-100"

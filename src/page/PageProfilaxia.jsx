@@ -108,7 +108,7 @@ function PageProfilaxia(props) {
           como você esta se sentindo ?
         </h3>
       </section>
-      <section className="rounded-3xl mx-5 mt-5 grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
+      <section className="rounded-3xl mx-5 mt-5 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
         <CardSentimento
           sentimento="Tranquilo"
           bgColor="bg-green-100"
