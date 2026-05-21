@@ -19,9 +19,12 @@ import commedoImg from "./assets/commedo.png";
 import comdorImg from "./assets/comdor.png";
 import senvivelImg from "./assets/senvivel.png";
 import pararImg from "./assets/parar.png";
+import Mascote from "./components/Mascote";
 
 function App() {
   const [name, setName] = useState("Paciente");
+  const [showMascote, setShowMascote] = useState(false);
+  const [statusMascote, setStatusMascote] = useState(false);
 
   function alterName() {
     Swal.fire({
@@ -36,13 +39,21 @@ function App() {
     });
   }
 
+  /*
   useEffect(() => {
     alterName();
   }, []);
+*/
+
+  function handleMascote(statusMascote) {
+    setStatusMascote(statusMascote)
+    setShowMascote((prev) => !prev);
+  }
 
   return (
     <>
-      <div className="min-w-screen min-h-screen bg-sky-50">
+      {showMascote && <Mascote statusMascote={statusMascote} handleMascote={handleMascote} />}
+      <div className="min-w-screen min-h-screen bg-sky-50" >
         {/* menu */}
         <div
           className="pb-20 pt-2 bg-cover bg-center bg-no-repeat rounded-lg rounded-b-[100px] "
@@ -50,7 +61,7 @@ function App() {
             backgroundImage: `url(${planoDeFundo})`,
           }}
         >
-          <nav className="flex flex-row rounded-3xl mx-5 p-2 bg-white shadow-md">
+          <nav className="flex flex-row rounded-3xl mx-5 p-2 bg-white shadow-md ">
             <div className="basis-/4 lg:basis-3/4 text-left">
               <img src={logoImg} className="h-10  sm:h-16" />
             </div>
@@ -63,7 +74,9 @@ function App() {
                     </div>
                     <div className="basis-3/3">
                       <p className="text-md">Dentista</p>
-                      <p className="text-sky-600 font-bold text-sm lg:text-2xl">Dra. Yngrid</p>
+                      <p className="text-sky-600 font-bold text-sm lg:text-2xl">
+                        Dra. Yngrid
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -94,6 +107,7 @@ function App() {
             sentimento="Tranquilo"
             bgColor="bg-green-100"
             textColor="text-green-600"
+            handleMascote={() => {handleMascote('tranquilo')}}
           >
             <img src={tranquiloImg} className="h-20 md:h-38 xl:h-48" />
           </CardSentimento>
@@ -101,6 +115,7 @@ function App() {
             sentimento="Confiante"
             bgColor="bg-lime-100"
             textColor="text-lime-600"
+            handleMascote={() => {handleMascote('confiante')}}
           >
             <img src={confianteImg} className="h-20 md:h-38 xl:h-48" />
           </CardSentimento>
@@ -108,6 +123,7 @@ function App() {
             sentimento="Com medo"
             bgColor="bg-blue-100"
             textColor="text-blue-600"
+            handleMascote={() => {handleMascote('commedo')}}
           >
             <img src={commedoImg} className="h-20 md:h-38 xl:h-48" />
           </CardSentimento>
@@ -115,15 +131,16 @@ function App() {
             sentimento="Ansioso"
             bgColor="bg-violet-100"
             textColor="text-violet-600"
+            handleMascote={() => {handleMascote('ansioso')}}
           >
             <img src={ansiosoImg} className="h-20 md:h-38 xl:h-48" />
           </CardSentimento>
-
           {/* segunda parte */}
           <CardSentimento
             sentimento="Estressado"
             bgColor="bg-amber-100"
             textColor="text-amber-600"
+            handleMascote={() => {handleMascote('estressado')}}
           >
             <img src={estressadoImg} className="h-20 md:h-38 xl:h-48" />
           </CardSentimento>
@@ -131,7 +148,7 @@ function App() {
             sentimento="Com dor"
             bgColor="bg-pink-100"
             textColor="text-pink-600"
-            sentimento="Com dor"
+            handleMascote={() => {handleMascote('comdor')}}
           >
             <img src={comdorImg} className="h-20 md:h-38 xl:h-48" />
           </CardSentimento>
@@ -139,7 +156,7 @@ function App() {
             sentimento="Sensível"
             bgColor="bg-sky-100"
             textColor="text-sky-600"
-            sentimento="Sensível"
+            handleMascote={() => {handleMascote('sensivel')}}
           >
             <img src={senvivelImg} className="h-20 md:h-38 xl:h-48" />
           </CardSentimento>
@@ -147,7 +164,7 @@ function App() {
             sentimento="Ansioso"
             bgColor="bg-red-100"
             textColor="text-red-600"
-            sentimento="Quero parar"
+            handleMascote={() => {handleMascote('queroparar')}}
           >
             <img src={pararImg} className="h-20 md:h-38 xl:h-48" />
           </CardSentimento>

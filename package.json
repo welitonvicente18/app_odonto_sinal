@@ -13,8 +13,10 @@
     "@fontsource-variable/inter": "^5.2.8",
     "@fontsource/inter": "^5.2.8",
     "@heroicons/react": "^2.2.0",
+    "lottie-react": "^2.4.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-type-animation": "^3.2.0",
     "sweetalert2": "^11.26.24"
   },
   "devDependencies": {
