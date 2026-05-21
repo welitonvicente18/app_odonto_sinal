@@ -21,8 +21,8 @@ function NavBar(props) {
   }
 
   return (
-    <nav className="flex flex-row rounded-3xl mx-5 p-2 bg-white shadow-md ">
-      <div className="basis-/4 lg:basis-3/4 text-left">
+    <nav class="flex flex-row flex-wrap rounded-3xl mx-5 p-2 bg-white shadow-md overflow-hidden">
+      <div className="basis-1/4 lg:basis-3/4 text-left">
         <img src={logoImg} className="h-10  sm:h-16" />
       </div>
       <div className="basis-3/4 md:basis-1/4">

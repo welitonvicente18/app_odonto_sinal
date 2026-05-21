@@ -187,13 +187,13 @@ function PageProfilaxia(props) {
           </p>
           <div className="flex flex-row justify-around mt-10 align-middle text-center justify-items-center">
             <button
-              className="px-20 py-3 bg-sky-300 hover:bg-sky-200 border border-sky-200 text-skey-800 rounded-3xl shadow-sm"
+              className="px-36 py-3 bg-sky-300 hover:bg-sky-200 border border-sky-200 text-skey-800 rounded-3xl shadow-sm"
               onClick={() => mudaCard(itemCard - 1)}
             >
               Voltar
             </button>
             <button
-              className="px-20 py-3 bg-sky-300 hover:bg-sky-200 border border-sky-200 text-skey-800 rounded-3xl shadow-sm"
+              className="px-36 py-3 bg-sky-300 hover:bg-sky-200 border border-sky-200 text-skey-800 rounded-3xl shadow-sm"
               onClick={() => mudaCard(itemCard + 1)}
             >
               Próximo

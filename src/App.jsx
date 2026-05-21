@@ -15,9 +15,9 @@ function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen">
+    <div class="relative min-h-screen">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="fixed inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${planoDeFundo})`,
           opacity: 1.0,
