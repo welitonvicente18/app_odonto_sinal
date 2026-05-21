@@ -9,7 +9,7 @@ import queropararAnimation from "../assets/lootlefiles/queroparar.json";
 
 import card1Img from "../assets/profilaxia/card_1.jpeg";
 import card2Img from "../assets/profilaxia/card_2.jpeg";
-import card3Img from "../assets/profilaxia/card_3.jpeg";
+import card3Img from "../assets/profilaxia/card_3.png";
 import card4Img from "../assets/profilaxia/card_4.jpeg";
 import card5Img from "../assets/profilaxia/card_5.jpeg";
 import card6Img from "../assets/profilaxia/card_6.jpeg";
@@ -76,7 +76,7 @@ function PageProfilaxia(props) {
       img: card8Img,
       title: "Conclusão",
       texto:
-        "Terminamos! Os seus dentes estão limpos, saudáveis e brilhando. Você colaborou muito e foi um excelente paciente. Parabéns!",
+        "Terminamos! Os seus dentes estão limpos, saudáveis e brilhando. Você colaborou muito e foi um excelente paciente.",
     },
   };
 
@@ -169,7 +169,7 @@ function PageProfilaxia(props) {
             <img
               src={cards[itemCard].img}
               alt="Imagem Profilaxia"
-              className=" h-full object-cover"
+              className=" h-full object-cover rounded-md"
             />
           </div>
         </div>
