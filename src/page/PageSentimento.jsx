@@ -33,7 +33,7 @@ function Sentimento(props) {
           Olá, <span className="text-sky-600 text-1xl md:text-6xl">{props.name}</span>
         </h1>
         <h3 className="text-2xl md:text-5xl mt-3">
-          Como você esta se sentindo ?
+          Como você está se sentindo ?
         </h3>
       </section>
       <section className="rounded-3xl bg-white mx-5 mt-16 p-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center shadow-lg">
